@@ -13,5 +13,5 @@ USER aicomp
 RUN curl -s https://get.sdkman.io | bash \
   && bash -l -c "yes | sdk install java" \
   && bash -l -c "sdk install sbt" \
-  && bash -l -c "sbt about -mem 1536" \
+  && bash -l -c "SBT_OPTS='-Xms4G -Xmx4G' sbt about -mem 1536" \
   && rm -Rf /home/aicomp/.sdkman/archives/* /home/aicomp/.sdkman/tmp/*

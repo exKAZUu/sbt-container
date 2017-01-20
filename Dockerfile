@@ -4,7 +4,7 @@ MAINTAINER Kazunori Sakamoto
 RUN free -m
 
 RUN apt update \
-  && apt install -y curl wget zip unzip \
+  && apt install -y curl wget zip unzip bc \
   && apt clean -y \
   && adduser --disabled-password --gecos "" aicomp
 

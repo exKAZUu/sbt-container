@@ -8,7 +8,6 @@ RUN apt update \
   && apt install -y \
     clang \
     clisp \
-    dmd-bin \
     erlang \
     gauche \
     gdc \

@@ -4,7 +4,33 @@ MAINTAINER Kazunori Sakamoto
 RUN free -m
 
 RUN apt update \
-  && apt install -y curl wget zip unzip bc \
+  && apt install -y build-essential curl wget zip unzip bc git less \
+  && apt install -y \
+    clang \
+    clisp \
+    dmd-bin \
+    erlang \
+    gauche \
+    gdc \
+    ghc \
+    gnu-smalltalk \
+    golang \
+    ldc \
+    llvm \
+    lua5.3 \
+    make \
+    mono-complete \
+    mono-dmcs \
+    mono-xbuild \
+    nodejs \
+    ocaml-nox \
+    python \
+    python3 \
+    perl \
+    php \
+    swi-prolog \
+    ruby \
+    rustc \
   && apt clean -y \
   && adduser --disabled-password --gecos "" aicomp
 

@@ -36,7 +36,7 @@ RUN apt update \
 USER aicomp
     
 RUN curl -s https://get.sdkman.io | bash \
-  && echo "-Xms1G -Xmx2G" >> /home/aicomp/.sbtopts \
+  && echo "-Xms1G -Xmx4G" >> /home/aicomp/.sbtopts \
   && bash -l -c "yes | sdk install java" \
   && bash -l -c "sdk install sbt 0.13.12" \
   && bash -l -c "sbt about" \

@@ -38,5 +38,4 @@ USER aicomp
 RUN curl -s https://get.sdkman.io | bash \
   && echo "-Xms1G -Xmx4G" >> /home/aicomp/.sbtopts \
   && bash -l -c "yes | sdk install java" \
-  && bash -l -c "sdk install sbt" \
   && rm -Rf /home/aicomp/.sdkman/archives/* /home/aicomp/.sdkman/tmp/*

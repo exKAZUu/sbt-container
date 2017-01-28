@@ -36,9 +36,9 @@ RUN apt update \
 USER aicomp
     
 RUN curl -s https://get.sdkman.io | bash \
-  && echo "-Xms1G -Xmx4G" >> /home/aicomp/.sbtopts \
+  && echo "-Xms512M -Xmx4G" >> /home/aicomp/.sbtopts \
   && bash -l -c "yes | sdk install java" \
   && bash -l -c "sdk install scala 2.10.6" \
   && bash -l -c "sdk install sbt" \
-  && bash -l -c "SBT_OPTS='-Xms1G -Xmx4G' sbt about" \
+  && bash -l -c "SBT_OPTS='-Xms512M -Xmx4G' sbt about" \
   && rm -Rf /home/aicomp/.sdkman/archives/* /home/aicomp/.sdkman/tmp/*
